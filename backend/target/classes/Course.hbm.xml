@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="Entity.Car" table="course" catalog="dbcars">
+       <id name="ID" type="java.lang.Integer">
+           <column name="Id" length="10"/>
+           <generator class="native" />
+       </id>
+
+       <property name="username" type="string">
+           <column name="username" length="20" not-null="true" unique="true" />
+       </property>
+
+       <property name="description" type="string">
+           <column name="description" length="50" not-null="true" unique="true" />
+       </property>
+
+   </class>
+
+</hibernate-mapping>
